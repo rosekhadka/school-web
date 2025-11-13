@@ -1,0 +1,197 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+:root{
+  --primaryColor: #fff3b0;
+  --maroonDark: #9e2a2b;
+  --darkYellow: #e09f3e;
+  --darkBlue: #335c67;
+}
+
+/*Responsive Navbar Section*/
+.nav-bar {
+  /* width: 100%; */
+  height: 65px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  position: relative;
+  background-color:var(--maroonDark);
+  padding: 12px 25px;
+}
+.logo a{
+  text-decoration: none;
+  color: black;
+  font-size: 35px;
+  font-weight: 600;
+  /* background-color: #fff; */
+  margin-left: 60px;
+}
+.menu {display: flex;}
+.menu li {padding-left: 30px;}
+.menu li a {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  transition: 0.15s ease-in-out;
+  position: relative;
+  text-transform: uppercase;
+}
+.menu li a:hover{
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+.menu li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: black;
+  transition: 0.15s ease-in-out;
+}
+.menu li a:hover:after {width: 100%;}
+.open-menu , .close-menu {
+  position: absolute;
+  color: black;
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: none;
+}
+.open-menu {
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+.close-menu {
+  top: 20px;
+  right: 20px;
+}
+#check {display: none;}
+@media(max-width: 610px){
+  .menu {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 80%;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      right: -100%;
+      z-index: 100;
+      background-color: var(--darkBlue);
+      transition: all 0.2s ease-in-out;
+  }
+  .menu li {margin-top: 40px;}
+  .menu li a {padding: 10px;}
+  .open-menu , .close-menu {display: block;}
+  #check:checked ~ .menu {right: 0;}
+}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial black", sans-serif;
+}
+nav {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  z-index: 12;
+  /* padding-bottom: 1px; */
+}
+
+
+body{
+  background-color: var(--maroonDark);
+}
+.nav-bar img{
+  height: 60px;
+  width: 60px;
+  /* background-color: #fff; */
+  position:fixed;
+}
+
+
+
+
+
+/* -------------------  */
+/* papers page css starts here  */
+/* -------------------  */
+
+.first_81{
+    overflow: scroll;
+    -ms-overflow-style: none; /*to hide scrollbar in IE & edge*/
+    scrollbar-width: none; /*to hide scroll bar in Firefox*/
+    height: 400px;
+}
+.term_first_81 .image{
+    height: 300px;
+    width: 300px;
+    margin: 20px 0 20px 20px;
+    border-radius: 20px;
+    background-position: center;
+    background-size:150%;
+    display: flex;
+    align-items: flex-end;
+    padding: 0 0 5px 10px;
+    flex-shrink: 0;
+    /* background-color: rgba(0, 0, 0, 100); */
+    background-color: var(--primaryColor);
+}
+.term_first_81{
+    display: flex;
+    /* margin: 65px 0 0 0; */
+}
+.first_81::-webkit-scrollbar{ /*to hide scrollbar in chrome safari and opera*/
+    display: none;
+}
+.image p{
+    color: aliceblue;
+}
+
+.question_header h1{
+  margin: 0 0 0 20px;
+}
+
+/* for bg  */
+.first_81 #math_81_1{
+  background-image: url(./images/maths.png);
+}
+.first_81 #science_81_1{
+  background-image: url(./images/science.png);
+}
+.first_81 #social_81_1{
+  background-image: url(./images/social.png);
+}
+.first_81 #english_81_1{
+  background-image: url(./images/english.png);
+}
+.first_81 #nepali_81_1{
+  background-image: url(./images/nepali.png);
+}
+.first_81 #computer_81_1{
+  background-image: url(./images/computer.png);
+}
+.first_81 #health_81_1{
+  background-image: url(./images/health.png);
+  margin-right: 20px;
+}
+.first_81 #shivaraj_81_1{
+  background-image: url(./images/shivaraj.png);
+  margin-right: 20px;
+}
+
+.first_paper{
+  padding: 90px 0 0 20px;
+}
+.second_paper{
+  margin: 0 0 0 20px;
+}

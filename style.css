@@ -1,0 +1,482 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+:root{
+  --primaryColor: #fff3b0;
+  --maroonDark: #9e2a2b;
+  --darkYellow: #e09f3e;
+  --darkBlue: #335c67;
+}
+
+/*Responsive Navbar Section*/
+.nav-bar {
+  /* width: 100%; */
+  height: 65px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  position: relative;
+  background-color:var(--maroonDark);
+  padding: 12px 25px;
+}
+.logo a{
+  text-decoration: none;
+  color: black;
+  font-size: 35px;
+  font-weight: 600;
+  /* background-color: #fff; */
+  margin-left: 60px;
+}
+.menu {display: flex;}
+.menu li {padding-left: 30px;}
+.menu li a {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  transition: 0.15s ease-in-out;
+  position: relative;
+  text-transform: uppercase;
+}
+.menu li a:hover{
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+.menu li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: black;
+  transition: 0.15s ease-in-out;
+}
+.menu li a:hover:after {width: 100%;}
+.open-menu , .close-menu {
+  position: absolute;
+  color: black;
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: none;
+}
+.open-menu {
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+.close-menu {
+  top: 20px;
+  right: 20px;
+}
+#check {display: none;}
+@media(max-width: 610px){
+  .menu {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 80%;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      right: -100%;
+      z-index: 100;
+      background-color: var(--darkBlue);
+      transition: all 0.2s ease-in-out;
+  }
+  .menu li {margin-top: 40px;}
+  .menu li a {padding: 10px;}
+  .open-menu , .close-menu {display: block;}
+  #check:checked ~ .menu {right: 0;}
+}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial black", sans-serif;
+}
+nav {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  z-index: 12;
+}
+
+
+body{
+  background-color: var(--maroonDark);
+}
+.nav-bar img{
+  height: 60px;
+  width: 60px;
+  /* background-color: #fff; */
+  position:fixed;
+}
+
+
+
+
+/* ------------------------------------ */
+/* Webpage css starts from here */
+/* ------------------------------------ */
+
+.home_page{
+  background-color: rebeccapurple;
+  /* min-height: 500px; */
+  height: 100vh;
+  background-image: url(./images/ref_bg.png);
+  background-size: 130%;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* padding-top: 60px; */
+}
+
+.home_page .slogans h1{
+  font-size: 50px;
+  color: var(--darkYellow);
+  text-shadow: 1px 1px 30px var(--primaryColor);
+}
+.home_page .slogans p{
+  font-size: 15px;
+  color: var(--darkYellow);
+  text-shadow: 1px 1px 10px var(--primaryColor);
+}
+.home_page .buttons{
+  margin-top: 20px;
+  display: flex;
+  gap: 25px;
+    filter: drop-shadow(2px 2px 5px var(--primaryColor));
+
+}
+.home_page .buttons a{
+  text-decoration: none;
+  color: var(--primaryColor);
+  background-color: var(--darkBlue);
+  padding: 10px 15px 10px 15px;
+  text-align: center;
+  border-radius: 7px;
+  border: 2px solid var(--darkYellow);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------  */
+/* numbers section css starts from here  */
+/* ------------------------------  */
+
+.numbers #box1{
+  background-image: url(./images/historybg.jpg);
+}
+.numbers #box2{
+  background-image: url(./images/students2bg.jpg);
+}
+.numbers #box3{
+  background-image: url(./images/teacherbg.jpg);
+}
+.numbers #box4{
+  background-image: url(./images/seebg.jpg);
+}
+
+
+
+
+.numbers h1{
+  color: var(--darkYellow);
+  font-size: 50px;
+  margin-left: 10px;
+  text-shadow: 2px 2px 20px var(--darkYellow);
+}
+
+.numbers .boxes p{
+  text-align: center;
+  color: var(--darkYellow);
+  text-shadow: 3px 3px 10px var(--darkYellow);
+}
+
+
+
+.numbers {
+  height: auto; /* allow height to adjust automatically */
+  display: flex;
+  flex-wrap: wrap; /* allows boxes to move to the next line */
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* adds space between boxes */
+}
+
+.numbers .boxes {
+  height: 32vh;
+  width: 35vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  margin: 20px;
+  padding: 20px;
+  background-color: var(--darkBlue);
+  background-position: center;
+  background-size: cover;
+}
+
+/* When screen width is below 900px, make 2 boxes per row */
+@media (max-width: 900px) {
+  .numbers .boxes {
+    width: 40%; /* 2 per row */
+  }
+}
+
+/* When screen width is below 600px, make 1 box per row */
+@media (max-width: 600px) {
+  .numbers .boxes {
+    width: 80%; /* 1 per row */
+  }
+}
+
+
+
+/* -------------------  */
+/* papers page css starts here  */
+/* -------------------  */
+
+.memories{
+    overflow: scroll;
+    -ms-overflow-style: none; /*to hide scrollbar in IE & edge*/
+    scrollbar-width: none; /*to hide scroll bar in Firefox*/
+    height: 360px;
+}
+.memories-photos .image{
+    height: 300px;
+    width: 300px;
+    margin: 20px 0 20px 20px;
+    border-radius: 20px;
+    background-position: center;
+    background-size:150%;
+    display: flex;
+    align-items: flex-end;
+    padding: 0 0 5px 10px;
+    flex-shrink: 0;
+    /* background-color: rgba(0, 0, 0, 100); */
+    background-color: var(--primaryColor);
+}
+.memories-photos{
+    display: flex;
+}
+.memories::-webkit-scrollbar{ /*to hide scrollbar in chrome safari and opera*/
+    display: none;
+}
+.image p{
+    color: aliceblue;
+}
+.memories img{
+  height: 100px;
+  width: 100px;
+}
+
+.question_header h1{
+  margin: 0 0 0 20px;
+}
+
+/* for bg  */
+.memories #image4{
+  background-image: url(./images/fourbg.jpg);
+}
+.memories #image5{
+  background-image: url(./images/fivebg.jpg);
+}
+.memories #image6{
+  background-image: url(./images/sixbg.jpg);
+}
+.memories #image7{
+  background-image: url(./images/sevenbg.jpg);
+}
+.memories #image8{
+  background-image: url(./images/eightbg.jpg);
+}
+.memories #image9{
+  background-image: url(./images/ninebg.jpg);
+}
+.memories #image10{
+  background-image: url(./images/tenbg.jpg);
+  margin-right: 20px;
+}
+
+/* ---------------  */
+/* footer section css  */
+/* ---------------  */
+
+/* .footer_section{
+  height: 50vh;
+  background-color: var(--darkBlue);
+  display: grid;
+  gap: 0px;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+  "logo   contact   map"
+  "logo   contact   map"
+  "logo   contact   map";
+} */
+
+
+/* Base desktop layout (already defined) */
+.footer_section {
+  height: auto;
+  background-color: var(--darkBlue);
+  display: grid;
+  grid-template-areas:
+    "logo contact map"
+    "logo contact map"
+    "logo contact map";
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+}
+
+/* Tablet: 2-column layout */
+@media (max-width: 900px) {
+  .footer_section {
+    grid-template-areas:
+      "logo contact"
+      "map map";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+}
+
+/* Mobile: stacked layout */
+@media (max-width: 600px) {
+
+  .footer_section {
+    grid-template-areas:
+      "logo"
+      "contact"
+      "map";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .footer_section .contacts {
+    margin: 20px 0 0 25px;
+  }
+  .footer_section .socials{
+    margin: 25px 0 0 0;
+  }
+  .home_page{
+    background-size: 400%;
+    background-position: center;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.footer_section .socials{
+  grid-area: logo;
+  background-color: var(--darkBlue);
+}
+.footer_section .contacts{
+  grid-area: contact;
+  background-color: var(--darkBlue);
+}
+.footer_section .map{
+  grid-area: map;
+}
+
+/* logo sections of footer  */
+.footer_section .socials{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer_section .school_logo_section{
+  display: flex;
+  align-items: center;
+}
+.footer_section .socials p{
+  /* background-color: rebeccapurple; */
+  width: 300px;
+}
+.footer_section .socials .social_logos{
+  display: flex;
+  /* background-color: #fff; */
+  width: 280px;
+  justify-content:space-between
+}
+
+.footer_section .socials .school_logo_section img{
+  height: 150px;
+  width: 150px;
+}
+.footer_section .socials .social_logos img{
+  height: 50px;
+  width: 50px;
+}
+.footer_section .socials h1{
+  font-size: 20px;
+  /* background-color: rebeccapurple; */
+  display: inline-block;
+  width: 200px;
+}
+
+
+/* contact section css  */
+.footer_section .contacts{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 60px;
+}
+
+
+
+
+.footer_section .contacts img{
+  height: 30px;
+  width: 30px;
+}
+.footer_section .contacts .contact_list{
+  display: flex;
+  align-items: center;
+}
+.footer_section .contacts .contact_list a{
+  text-decoration: none;
+  color: black;
+  margin-left: 15px;
+}
+
+.footer_section .map{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer_section .map iframe{
+  border-radius: 15px;
+  margin: 25px;
+}
+
+
